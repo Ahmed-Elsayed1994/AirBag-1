@@ -1,0 +1,7 @@
+G:\AirBag\CtrlPlusFramework\CoreData\bin\Debug\netcoreapp3.1\CoreData.deps.json
+G:\AirBag\CtrlPlusFramework\CoreData\bin\Debug\netcoreapp3.1\CoreData.dll
+G:\AirBag\CtrlPlusFramework\CoreData\bin\Debug\netcoreapp3.1\CoreData.pdb
+G:\AirBag\CtrlPlusFramework\CoreData\obj\Debug\netcoreapp3.1\CoreData.AssemblyInfoInputs.cache
+G:\AirBag\CtrlPlusFramework\CoreData\obj\Debug\netcoreapp3.1\CoreData.AssemblyInfo.cs
+G:\AirBag\CtrlPlusFramework\CoreData\obj\Debug\netcoreapp3.1\CoreData.dll
+G:\AirBag\CtrlPlusFramework\CoreData\obj\Debug\netcoreapp3.1\CoreData.pdb

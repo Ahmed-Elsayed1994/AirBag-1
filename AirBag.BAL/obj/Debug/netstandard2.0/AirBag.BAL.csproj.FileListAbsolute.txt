@@ -1,0 +1,8 @@
+G:\AirBag\AirBag.BAL\bin\Debug\netstandard2.0\AirBag.BAL.deps.json
+G:\AirBag\AirBag.BAL\bin\Debug\netstandard2.0\AirBag.BAL.dll
+G:\AirBag\AirBag.BAL\bin\Debug\netstandard2.0\AirBag.BAL.pdb
+G:\AirBag\AirBag.BAL\obj\Debug\netstandard2.0\AirBag.BAL.csprojAssemblyReference.cache
+G:\AirBag\AirBag.BAL\obj\Debug\netstandard2.0\AirBag.BAL.AssemblyInfoInputs.cache
+G:\AirBag\AirBag.BAL\obj\Debug\netstandard2.0\AirBag.BAL.AssemblyInfo.cs
+G:\AirBag\AirBag.BAL\obj\Debug\netstandard2.0\AirBag.BAL.dll
+G:\AirBag\AirBag.BAL\obj\Debug\netstandard2.0\AirBag.BAL.pdb
