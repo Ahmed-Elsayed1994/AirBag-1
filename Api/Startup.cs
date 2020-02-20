@@ -39,6 +39,7 @@ namespace Api
                 options.ValueLengthLimit = int.MaxValue;
                 options.MultipartBodyLengthLimit = long.MaxValue;
             });
+            services.ConfigureAutoMapperService();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

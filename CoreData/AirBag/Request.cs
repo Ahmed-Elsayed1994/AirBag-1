@@ -1,5 +1,6 @@
 ﻿using Framework.Core;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CoreData.Users.Entities
@@ -16,5 +17,8 @@ namespace CoreData.Users.Entities
         public virtual RequestType RequestType { get; set; }
         [ForeignKey("UserId")]
         public virtual User User { get; set; }
+        [ForeignKey("ActionId")]
+        public virtual Action Action { get; set; }
+        public virtual ICollection<RequestDetails> RequestDetails { get; set; }
     }
 }

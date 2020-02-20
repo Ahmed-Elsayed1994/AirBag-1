@@ -14,11 +14,16 @@ namespace CoreData.Users.Entities
         public DateTime DateTimeTakeOff { get; set; }
         public DateTime ArrivalDateTime { get; set; }
         public string TripNumber { get; set; }
+        [Column(TypeName = "decimal(5, 2)")]
         public decimal AvailableWeight { get; set; }
+        [Column(TypeName = "decimal(5, 2)")]
         public decimal Weight { get; set; }
+        [Column(TypeName = "decimal(5, 2)")]
         public decimal CostPerKG { get; set; }
         public string TiketPhotoId { get; set; }
         public bool Boost { get; set; }
+        public bool IsActive { get; set; }
+
         public int UserId { get; set; }
         [ForeignKey("UserId")]
         public virtual User User { get; set; }
@@ -27,7 +32,7 @@ namespace CoreData.Users.Entities
         [ForeignKey("ArrivalAirPortId")]
         public virtual AirPort ArrivalAirPort { get; set; }
         [ForeignKey("AirPortCompanyId")]
-        public virtual AirPortCaompany AirPortCaompany { get; set; }
+        public virtual AirPortCompany AirPortCaompany { get; set; }
         public virtual ICollection<UnWantedBagCategory> UnWantedBagCategories { get; set; }
     }
 }

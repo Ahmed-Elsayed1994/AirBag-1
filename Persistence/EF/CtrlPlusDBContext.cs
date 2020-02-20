@@ -9,7 +9,6 @@ using Microsoft.Extensions.Configuration;
 using CoreData.Common.Entities.Notifications;
 using Framework.Core;
 using System.Reflection;
-using Persistence.EntityConfiguration;
 
 namespace Persistence.EF
 {
@@ -17,10 +16,28 @@ namespace Persistence.EF
     {
         public virtual DbSet<EntityModule.User> Users { get; set; }
         public virtual DbSet<EntityModule.Role> Roles { get; set; }
-
         public virtual DbSet<File> Files { get; set; }
-
         public virtual DbSet<Subscriptions> Subscriptions { get; set; }
+        public virtual DbSet<Action> Actions { get; set; }
+        public virtual DbSet<AirPort> AirPorts { get; set; }
+        public virtual DbSet<AirPortCompany> AirPortCompanies { get; set; }
+        public virtual DbSet<Bag> Bags { get; set; }
+        public virtual DbSet<City> Cities { get; set; }
+        public virtual DbSet<Country> Countries { get; set; }
+        public virtual DbSet<Issue> Issues { get; set; }
+        public virtual DbSet<IssueCategory> IssueCategories { get; set; }
+        public virtual DbSet<Item> Items { get; set; }
+        public virtual DbSet<ItemCategory> ItemCategories { get; set; }
+        public virtual DbSet<ManagementNotes> ManagementNotes { get; set; }
+        public virtual DbSet<MobileCountryCode> MobileCountryCodes { get; set; }
+        public virtual DbSet<PromoCode> PromoCodes { get; set; }
+        public virtual DbSet<Rate> Rates { get; set; }
+        public virtual DbSet<Request> Requests { get; set; }
+        public virtual DbSet<RequestDetails> RequestDetails { get; set; }
+        public virtual DbSet<RequestType> RequestTypes { get; set; }
+        public virtual DbSet<Transaction> PaymentTransactions { get; set; }
+        public virtual DbSet<UnWantedBagCategory> UnWantedBagCategories { get; set; }
+        public virtual DbSet<Card> Cards { get; set; }
 
         public CtrlPlusDbContext(DbContextOptions<CtrlPlusDbContext> options):base(options)
         {
@@ -73,12 +90,6 @@ namespace Persistence.EF
             }
             optionsBuilder.UseLazyLoadingProxies();
 
-        }
-
-        [DbFunction("GetLocalized")]
-        public static string Localize(int EntityId, string TableName, string ColumnName, string Language, string Default)
-        {
-            throw new System.Exception(); // this code doesn't get executed; the call is passed through to the database function
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

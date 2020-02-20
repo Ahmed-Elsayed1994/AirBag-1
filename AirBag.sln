@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "User.BAL", "UserModule\User.BAL\User.BAL.csproj", "{CC7DD9C0-C068-4FE4-9815-F80B76E701FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirBag.BAL", "AirBag.BAL\AirBag.BAL.csproj", "{70C2EC35-FB8D-4668-9BCB-DB235A6EA665}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirBag.BAL", "AirBag.BAL\AirBag.BAL.csproj", "{B064E872-31C4-4005-8D3E-22682CE151B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,10 +57,10 @@ Global
 		{CC7DD9C0-C068-4FE4-9815-F80B76E701FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC7DD9C0-C068-4FE4-9815-F80B76E701FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC7DD9C0-C068-4FE4-9815-F80B76E701FE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{70C2EC35-FB8D-4668-9BCB-DB235A6EA665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70C2EC35-FB8D-4668-9BCB-DB235A6EA665}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70C2EC35-FB8D-4668-9BCB-DB235A6EA665}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70C2EC35-FB8D-4668-9BCB-DB235A6EA665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B064E872-31C4-4005-8D3E-22682CE151B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B064E872-31C4-4005-8D3E-22682CE151B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B064E872-31C4-4005-8D3E-22682CE151B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B064E872-31C4-4005-8D3E-22682CE151B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

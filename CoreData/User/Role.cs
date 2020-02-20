@@ -13,6 +13,6 @@ namespace CoreData.Users.Entities
         [Column(Order = 2)]
         [Required]
         public string Name { get; set; }
-        public virtual ICollection<UserRole> UserRoles { get; set; }
+        public virtual ICollection<UserRate> UserRoles { get; set; }
     }
 }

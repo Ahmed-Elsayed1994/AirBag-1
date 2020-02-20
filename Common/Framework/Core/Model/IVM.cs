@@ -2,9 +2,8 @@
 
 namespace Framework.Core.Model
 {
-    public interface IVM
+    public abstract class IVM
     {
-        
-        int Id { get;  set; }
+        public int Id { get;  set; }
     }
 }

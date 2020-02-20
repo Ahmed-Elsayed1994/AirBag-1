@@ -1,11 +1,10 @@
 ﻿using Framework.Core;
-using System;
-using System.ComponentModel.DataAnnotations.Schema;
+using Framework.Core.Model;
 
 namespace CoreData.Users.Entities
 {
 
-    public class AirPortCaompany : BaseEntity
+    public class CountryVm : IVM
     {
         public string Name { get; set; }
     }

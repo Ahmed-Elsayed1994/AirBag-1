@@ -13,7 +13,7 @@ namespace Api.Extensions
             var connectionString = Configuration.GetConnectionString("Default");
             var FormsConnectionString = Configuration.GetConnectionString("FormsConnectionString");
             services.AddDbContext<ICtrlPlusDbContext, CtrlPlusDbContext>(options =>
-             options.UseSqlServer(connectionString, b => b.MigrationsAssembly("Api")));
+             options.UseSqlServer(connectionString, b => b.MigrationsAssembly("Persistence")));
         }
     }
 }
