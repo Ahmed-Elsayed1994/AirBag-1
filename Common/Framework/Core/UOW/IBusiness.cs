@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Framework.Core.UOW
 {
-    public interface IBusiness<T, TVM> where T : BaseEntity where TVM : IVM
+    public interface IBaseService<T, TVM> where T : BaseEntity where TVM : IVM
     {
         IVM GetSingle(Expression<Func<T, bool>> expression);
         IVM GetById(int id);

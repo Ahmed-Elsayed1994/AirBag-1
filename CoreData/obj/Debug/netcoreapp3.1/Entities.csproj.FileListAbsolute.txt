@@ -12,3 +12,4 @@ G:\AirBag\CoreData\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
 G:\AirBag\CoreData\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
 G:\AirBag\CoreData\obj\Debug\netcoreapp3.1\Entities.dll
 G:\AirBag\CoreData\obj\Debug\netcoreapp3.1\Entities.pdb
+G:\AirBag\CoreData\obj\Debug\netcoreapp3.1\Entities.csprojAssemblyReference.cache

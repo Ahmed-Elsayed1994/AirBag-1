@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace NotificationManagement.Services
 {
-    public interface INotificationService : IBusiness<Notification, NotificationVm>
+    public interface INotificationService : IBaseService<Notification, NotificationVm>
     {
         HeaderNotificationVm GetNotificationsByUser(int userId);
         void MakeAsRead(int userId);

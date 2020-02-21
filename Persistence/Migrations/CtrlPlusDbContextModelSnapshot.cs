@@ -206,7 +206,7 @@ namespace Persistence.Migrations
                     b.ToTable("AirPorts");
                 });
 
-            modelBuilder.Entity("CoreData.Users.Entities.AirPortCompany", b =>
+            modelBuilder.Entity("CoreData.Users.Entities.Airline", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -593,14 +593,17 @@ namespace Persistence.Migrations
                     b.Property<string>("Comment")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<int>("UserRateToId")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("Value")
-                        .HasColumnType("decimal(5, 2)");
+                    b.Property<int>("Value")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -814,6 +817,9 @@ namespace Persistence.Migrations
                     b.Property<string>("ProfilePictureFileId")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<decimal>("Rate")
+                        .HasColumnType("decimal(5, 2)");
+
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -935,7 +941,7 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("CoreData.Users.Entities.Bag", b =>
                 {
-                    b.HasOne("CoreData.Users.Entities.AirPortCompany", "AirPortCaompany")
+                    b.HasOne("CoreData.Users.Entities.Airline", "AirPortCaompany")
                         .WithMany()
                         .HasForeignKey("AirPortCompanyId")
                         .OnDelete(DeleteBehavior.Cascade)

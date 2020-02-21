@@ -32,7 +32,7 @@ namespace CoreData.Users.Entities
         [ForeignKey("ArrivalAirPortId")]
         public virtual AirPort ArrivalAirPort { get; set; }
         [ForeignKey("AirPortCompanyId")]
-        public virtual AirPortCompany AirPortCaompany { get; set; }
+        public virtual Airline AirPortCaompany { get; set; }
         public virtual ICollection<UnWantedBagCategory> UnWantedBagCategories { get; set; }
     }
 }

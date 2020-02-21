@@ -20,7 +20,7 @@ namespace Persistence.EF
         public virtual DbSet<Subscriptions> Subscriptions { get; set; }
         public virtual DbSet<Action> Actions { get; set; }
         public virtual DbSet<AirPort> AirPorts { get; set; }
-        public virtual DbSet<AirPortCompany> AirPortCompanies { get; set; }
+        public virtual DbSet<Airline> AirPortCompanies { get; set; }
         public virtual DbSet<Bag> Bags { get; set; }
         public virtual DbSet<City> Cities { get; set; }
         public virtual DbSet<Country> Countries { get; set; }

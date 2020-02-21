@@ -8,7 +8,7 @@ using System.Text;
 
 namespace RiskManagement.BAL.Services.Common
 {
-    public interface IFileService : IBusiness<File, FileVM>
+    public interface IFileService : IBaseService<File, FileVM>
     {
        IList<FileVM> GetFileByrefId(int refId, string tableName);
         IList<FileVM> GetFiles(IList<FileVM> report, int reportId, string TableName);

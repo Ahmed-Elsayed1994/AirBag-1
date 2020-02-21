@@ -3,7 +3,7 @@
 namespace CoreData.Users.Entities
 {
 
-    public class AirPortCompanyVm : IVM
+    public class AirlineVm : IVM
     {
         public string Name { get; set; }
     }

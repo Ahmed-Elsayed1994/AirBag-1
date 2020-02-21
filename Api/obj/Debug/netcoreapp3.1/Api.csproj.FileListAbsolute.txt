@@ -387,3 +387,9 @@ G:\AirBag\Api\obj\Debug\netcoreapp3.1\Api.RazorTargetAssemblyInfo.cache
 G:\AirBag\Api\obj\Debug\netcoreapp3.1\Api.csproj.CopyComplete
 G:\AirBag\Api\obj\Debug\netcoreapp3.1\Api.dll
 G:\AirBag\Api\obj\Debug\netcoreapp3.1\Api.pdb
+G:\AirBag\Api\bin\Debug\netcoreapp3.1\AutoMapper.dll
+G:\AirBag\Api\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+G:\AirBag\Api\bin\Debug\netcoreapp3.1\AirBag.BAL.dll
+G:\AirBag\Api\bin\Debug\netcoreapp3.1\AirBag.BAL.pdb
+G:\AirBag\Api\obj\Debug\netcoreapp3.1\Api.MvcApplicationPartsAssemblyInfo.cs
+G:\AirBag\Api\obj\Debug\netcoreapp3.1\Api.MvcApplicationPartsAssemblyInfo.cache

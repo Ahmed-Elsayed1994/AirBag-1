@@ -11,7 +11,7 @@ namespace Api.Controllers.Base
     [Route("api/[controller]")]
     [ApiController]
     //[Authorize]
-    public class BaseAPIController<Service, Entity, VM> : CommonController where Service : IBusiness<Entity, VM> where Entity : BaseEntity where VM : IVM, new()
+    public class BaseAPIController<Service, Entity, VM> : CommonController where Service : IBaseService<Entity, VM> where Entity : BaseEntity where VM : IVM, new()
     {
         internal readonly IUnitOfWork _unitOfWork;
         protected readonly Service _service;

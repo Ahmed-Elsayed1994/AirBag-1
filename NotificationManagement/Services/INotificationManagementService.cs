@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace NotificationManagement.Services
 {
-    public interface INotificationManagementService : IBusiness<Subscriptions, SubscriptionVm>
+    public interface INotificationManagementService : IBaseService<Subscriptions, SubscriptionVm>
     {
         void SubscribeUser(SubscriptionVm subscription);
         void UnSubscribe(SubscriptionVm subscription);

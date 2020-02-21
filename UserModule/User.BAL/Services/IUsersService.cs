@@ -6,7 +6,7 @@ using User.BAL.Models;
 
 namespace User.BAL.Services
 {
-    public interface IUsersService : IBusiness<CoreData.Users.Entities.User, UserVM>
+    public interface IUsersService : IBaseService<CoreData.Users.Entities.User, UserVM>
     {
         UserManagementVM GetCreateUserPageInfo();
         IList<int> GetAdminUserIds();

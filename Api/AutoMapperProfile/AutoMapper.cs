@@ -9,7 +9,7 @@ namespace Api.AutoMapperProfile
         {
             CreateMap<CoreData.Users.Entities.Action, ActionVm>().ReverseMap();
             CreateMap<AirPort, AirPortVm>().ReverseMap();
-            CreateMap<AirPortCompany, AirPortCompanyVm>().ReverseMap();
+            CreateMap<Airline, AirlineVm>().ReverseMap();
             CreateMap<Bag, BagVm>().ReverseMap();
             CreateMap<Card, CardVm>().ReverseMap();
             CreateMap<City, CityVm>().ReverseMap();

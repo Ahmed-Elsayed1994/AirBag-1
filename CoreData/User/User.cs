@@ -21,6 +21,8 @@ namespace CoreData.Users.Entities
         public string PhoneNumber { get; set; }
         public string ProfilePictureFileId { get; set; }
         public string Location { get; set; }
+        [Column(TypeName = "decimal(5, 2)")]
+        public decimal Rate { get; set; }
         public virtual ICollection<UserRole> UserRoles { get; set; }
         public virtual ICollection<NotificationUsers> Notifications { get; set; }
         public virtual ICollection<UserNotificationType> UserNotificationTypes { get; set; }

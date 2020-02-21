@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Framework.Core.BaseModel
 {
-    public abstract class BaseService<T, TVM> : IBusiness<T, TVM> where T : BaseEntity where TVM : IVM
+    public abstract class BaseService<T, TVM> : IBaseService<T, TVM> where T : BaseEntity where TVM : IVM
     {
         protected readonly IRepository<T> _repository;
         protected readonly IUnitOfWork _unitOfWork;

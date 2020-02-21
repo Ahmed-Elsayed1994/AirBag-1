@@ -10,7 +10,7 @@ namespace CoreData.Users.Entities
     {
         public int UserRateToId { get; set; }
         public string Comment { get; set; }
-        public decimal Value { get; set; }
+        public int Value { get; set; }
         public string UserRateToName { get; set; }
     }
 }

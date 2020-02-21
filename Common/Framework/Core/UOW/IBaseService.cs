@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Framework.Core.UOW
 {
-    public interface IBaseService : IBusiness<BaseEntity, IVM>
+    public interface IBaseService : IBaseService<BaseEntity, IVM>
     {
     }
 }
