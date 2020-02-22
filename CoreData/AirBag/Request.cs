@@ -9,7 +9,7 @@ namespace CoreData.Users.Entities
     public class Request : BaseEntity
     {
         public int RequestTypeId { get; set; }
-        public int ActionId { get; set; }
+        public int? ActionId { get; set; }
         public DateTime RequestDateTime { get; set; }
         public string PromoCode { get; set; }
         public int UserId { get; set; }

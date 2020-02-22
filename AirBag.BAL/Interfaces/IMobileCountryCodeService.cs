@@ -3,7 +3,7 @@ using Framework.Core.UOW;
 
 namespace AirBag.BAL.Interfaces
 {
-    interface IMobileCountryCodeService : IBaseService<MobileCountryCode, MobileCountryCodeVm>
+    public interface IMobileCountryCodeService : IBaseService<MobileCountryCode, MobileCountryCodeVm>
     {
     }
 }

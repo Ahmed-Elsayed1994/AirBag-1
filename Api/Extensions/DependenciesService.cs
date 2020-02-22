@@ -15,6 +15,7 @@ using Persistence.UnitOfWork;
 using Framework.Core.Repo.Interfaces;
 using Persistence.Repositories;
 using NotificationManagement.Models;
+using AirBag.BAL.Interfaces;
 
 namespace Api.Extensions
 {
@@ -44,6 +45,28 @@ namespace Api.Extensions
             services.AddTransient<IEmailSenderService, EmailSenderService>();
             services.AddTransient<ISendNotificationService, SendingNotificationService>();
             services.AddTransient<INotificationManagementService, NotificationManagementService>();
+
+
+            #region airbag
+            services.AddTransient<IAirlineService, AirLineService>();
+            services.AddTransient<IAirPortService, AirPortService>();
+            services.AddTransient<IBagService, BagService>();
+            services.AddTransient<ICardService, CardService>();
+            services.AddTransient<ICityService, CityService>();
+            services.AddTransient<ICountryService, CountryService>();
+            services.AddTransient<IIsueCategoryService, IssueCategoryService>();
+            services.AddTransient<IIssueService, IssueService>();
+            services.AddTransient<IItemService, ItemService>();
+
+            services.AddTransient<IItemCategoryService, ItemCategoryService>();
+            services.AddTransient<IManagementNotes, ManagementNotesService>();
+            services.AddTransient<IMobileCountryCodeService, MobileCountryCodeService>();
+            services.AddTransient<IPaymentTransaction, PaymentTransactionService>();
+            services.AddTransient<IPromoCodeService, PromoCodeService>();
+            services.AddTransient<IRateService, RateService>();
+            services.AddTransient<IRequestService, RequestService>();
+
+            #endregion
         }
     }
 }

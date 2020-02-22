@@ -5,6 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200221140841_editRates.cs" />
+    <Compile Remove="Migrations\20200221140841_editRates.Designer.cs" />
+    <Compile Remove="Migrations\20200222105908_editcountryCode.cs" />
+    <Compile Remove="Migrations\20200222105908_editcountryCode.Designer.cs" />
+    <Compile Remove="Migrations\20200222113337_editcountryCode.cs" />
+    <Compile Remove="Migrations\20200222113337_editcountryCode.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

@@ -239,6 +239,12 @@ namespace Persistence.Migrations
                     b.Property<int>("AirPortTakeOffId")
                         .HasColumnType("int");
 
+                    b.Property<int>("ApprovedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ApprovedUserId")
+                        .HasColumnType("int");
+
                     b.Property<int>("ArrivalAirPortId")
                         .HasColumnType("int");
 
@@ -263,8 +269,14 @@ namespace Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<int>("ManagementApprovedStatusId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RequestApprovedStatusId")
+                        .HasColumnType("int");
 
                     b.Property<string>("TiketPhotoId")
                         .HasColumnType("nvarchar(max)");
@@ -284,7 +296,13 @@ namespace Persistence.Migrations
 
                     b.HasIndex("AirPortTakeOffId");
 
+                    b.HasIndex("ApprovedUserId");
+
                     b.HasIndex("ArrivalAirPortId");
+
+                    b.HasIndex("ManagementApprovedStatusId");
+
+                    b.HasIndex("RequestApprovedStatusId");
 
                     b.HasIndex("UserId");
 
@@ -370,6 +388,40 @@ namespace Persistence.Migrations
                     b.ToTable("Countries");
                 });
 
+            modelBuilder.Entity("CoreData.Users.Entities.Invitation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("Id")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("PromoCodeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserInviteToId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PromoCodeId");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("UserInviteToId");
+
+                    b.ToTable("Invitations");
+                });
+
             modelBuilder.Entity("CoreData.Users.Entities.Issue", b =>
                 {
                     b.Property<int>("Id")
@@ -432,8 +484,32 @@ namespace Persistence.Migrations
                     b.Property<int>("AirPortTakeOffId")
                         .HasColumnType("int");
 
+                    b.Property<int>("ApprovedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ApprovedDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("ApprovedUserId")
+                        .HasColumnType("int");
+
                     b.Property<int>("ArrivalAirPortId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("ArrivalDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Boost")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateTimeTakeOff")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Dscription")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Hieght")
                         .HasColumnType("decimal(5, 2)");
@@ -447,17 +523,26 @@ namespace Persistence.Migrations
                     b.Property<int>("ItemCategoryId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("LastUpdatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<decimal>("Length")
                         .HasColumnType("decimal(5, 2)");
 
                     b.Property<string>("Link")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ManagementApprovedStatusId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhotosIds")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RequestApprovedStatusId")
+                        .HasColumnType("int");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -468,16 +553,19 @@ namespace Persistence.Migrations
                     b.Property<decimal>("Width")
                         .HasColumnType("decimal(5, 2)");
 
-                    b.Property<string>("description")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("AirPortTakeOffId");
 
+                    b.HasIndex("ApprovedUserId");
+
                     b.HasIndex("ArrivalAirPortId");
 
                     b.HasIndex("ItemCategoryId");
+
+                    b.HasIndex("ManagementApprovedStatusId");
+
+                    b.HasIndex("RequestApprovedStatusId");
 
                     b.HasIndex("UserId");
 
@@ -541,12 +629,36 @@ namespace Persistence.Migrations
                     b.Property<string>("CountryCode")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("CountryId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CountryId");
+
                     b.ToTable("MobileCountryCodes");
+                });
+
+            modelBuilder.Entity("CoreData.Users.Entities.Nationality", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("Id")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Nationality");
                 });
 
             modelBuilder.Entity("CoreData.Users.Entities.PromoCode", b =>
@@ -599,6 +711,9 @@ namespace Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.Property<int>("UserRateToId")
                         .HasColumnType("int");
 
@@ -606,6 +721,8 @@ namespace Persistence.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.HasIndex("UserRateToId");
 
@@ -717,6 +834,25 @@ namespace Persistence.Migrations
                     b.ToTable("Roles");
                 });
 
+            modelBuilder.Entity("CoreData.Users.Entities.Status", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("Id")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Status");
+                });
+
             modelBuilder.Entity("CoreData.Users.Entities.Transaction", b =>
                 {
                     b.Property<int>("Id")
@@ -789,9 +925,24 @@ namespace Persistence.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<bool>("CarrierMore")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("CountryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CoverPictureFileId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDateTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HashedPassword")
                         .HasColumnType("nvarchar(max)");
@@ -802,6 +953,9 @@ namespace Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Location")
                         .HasColumnType("nvarchar(max)");
 
@@ -810,6 +964,9 @@ namespace Persistence.Migrations
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("NationalityId")
+                        .HasColumnType("int");
 
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
@@ -820,6 +977,12 @@ namespace Persistence.Migrations
                     b.Property<decimal>("Rate")
                         .HasColumnType("decimal(5, 2)");
 
+                    b.Property<bool?>("RemeberMe")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("SenderMore")
+                        .HasColumnType("bit");
+
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -829,43 +992,14 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MobileCountryCodeId");
+                    b.HasIndex("CountryId");
+
+                    b.HasIndex("NationalityId");
 
                     b.HasIndex("UserName", "Email")
                         .IsUnique();
 
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("CoreData.Users.Entities.UserRate", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("Id")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<int?>("RateId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("RoleId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RateId");
-
-                    b.HasIndex("RoleId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UserRate");
                 });
 
             modelBuilder.Entity("CoreData.Users.Entities.UserRole", b =>
@@ -953,9 +1087,26 @@ namespace Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("CoreData.Users.Entities.User", "ApprovedUser")
+                        .WithMany("ApprovedBags")
+                        .HasForeignKey("ApprovedUserId")
+                        .OnDelete(DeleteBehavior.NoAction);
+
                     b.HasOne("CoreData.Users.Entities.AirPort", "ArrivalAirPort")
                         .WithMany()
                         .HasForeignKey("ArrivalAirPortId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CoreData.Users.Entities.Status", "ManagementApprovedStatus")
+                        .WithMany()
+                        .HasForeignKey("ManagementApprovedStatusId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CoreData.Users.Entities.Status", "RequestApprovedStatus")
+                        .WithMany()
+                        .HasForeignKey("RequestApprovedStatusId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -984,6 +1135,27 @@ namespace Persistence.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("CoreData.Users.Entities.Invitation", b =>
+                {
+                    b.HasOne("CoreData.Users.Entities.PromoCode", "PromoCode")
+                        .WithMany()
+                        .HasForeignKey("PromoCodeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CoreData.Users.Entities.User", "User")
+                        .WithMany("Invitations")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("CoreData.Users.Entities.User", "UserInviteTo")
+                        .WithMany("MyInvitations")
+                        .HasForeignKey("UserInviteToId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("CoreData.Users.Entities.Issue", b =>
                 {
                     b.HasOne("CoreData.Users.Entities.IssueCategory", "IssueCategory")
@@ -1007,6 +1179,11 @@ namespace Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("CoreData.Users.Entities.User", "ApprovedUser")
+                        .WithMany("ApprovedItems")
+                        .HasForeignKey("ApprovedUserId")
+                        .OnDelete(DeleteBehavior.NoAction);
+
                     b.HasOne("CoreData.Users.Entities.AirPort", "ArrivalAirPort")
                         .WithMany()
                         .HasForeignKey("ArrivalAirPortId")
@@ -1016,6 +1193,18 @@ namespace Persistence.Migrations
                     b.HasOne("CoreData.Users.Entities.ItemCategory", "ItemCategory")
                         .WithMany()
                         .HasForeignKey("ItemCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CoreData.Users.Entities.Status", "ManagementApprovedStatus")
+                        .WithMany()
+                        .HasForeignKey("ManagementApprovedStatusId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CoreData.Users.Entities.Status", "RequestApprovedStatus")
+                        .WithMany()
+                        .HasForeignKey("RequestApprovedStatusId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1035,6 +1224,15 @@ namespace Persistence.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("CoreData.Users.Entities.MobileCountryCode", b =>
+                {
+                    b.HasOne("CoreData.Users.Entities.Country", "Country")
+                        .WithMany()
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("CoreData.Users.Entities.PromoCode", b =>
                 {
                     b.HasOne("CoreData.Users.Entities.User", "User")
@@ -1046,10 +1244,16 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("CoreData.Users.Entities.Rate", b =>
                 {
-                    b.HasOne("CoreData.Users.Entities.User", "UserRateTo")
+                    b.HasOne("CoreData.Users.Entities.User", "User")
                         .WithMany("Rates")
-                        .HasForeignKey("UserRateToId")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CoreData.Users.Entities.User", "UserRateTo")
+                        .WithMany("MyRates")
+                        .HasForeignKey("UserRateToId")
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -1119,32 +1323,19 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("CoreData.Users.Entities.User", b =>
                 {
-                    b.HasOne("CoreData.Users.Entities.MobileCountryCode", "MobileCountryCode")
+                    b.HasOne("CoreData.Users.Entities.Country", "Country")
                         .WithMany()
-                        .HasForeignKey("MobileCountryCodeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
+                        .HasForeignKey("CountryId");
 
-            modelBuilder.Entity("CoreData.Users.Entities.UserRate", b =>
-                {
-                    b.HasOne("CoreData.Users.Entities.Rate", "Rate")
-                        .WithMany("UserRates")
-                        .HasForeignKey("RateId");
-
-                    b.HasOne("CoreData.Users.Entities.Role", null)
-                        .WithMany("UserRoles")
-                        .HasForeignKey("RoleId");
-
-                    b.HasOne("CoreData.Users.Entities.User", "User")
-                        .WithMany("UserRates")
-                        .HasForeignKey("UserId");
+                    b.HasOne("CoreData.Users.Entities.Nationality", "Nationality")
+                        .WithMany()
+                        .HasForeignKey("NationalityId");
                 });
 
             modelBuilder.Entity("CoreData.Users.Entities.UserRole", b =>
                 {
                     b.HasOne("CoreData.Users.Entities.Role", "Role")
-                        .WithMany()
+                        .WithMany("UserRoles")
                         .HasForeignKey("RoleId");
 
                     b.HasOne("CoreData.Users.Entities.User", "User")

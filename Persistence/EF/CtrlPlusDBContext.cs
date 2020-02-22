@@ -38,6 +38,7 @@ namespace Persistence.EF
         public virtual DbSet<Transaction> PaymentTransactions { get; set; }
         public virtual DbSet<UnWantedBagCategory> UnWantedBagCategories { get; set; }
         public virtual DbSet<Card> Cards { get; set; }
+        public virtual DbSet<Invitation> Invitations { get; set; }
 
         public CtrlPlusDbContext(DbContextOptions<CtrlPlusDbContext> options):base(options)
         {

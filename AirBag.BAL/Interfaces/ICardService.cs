@@ -3,7 +3,7 @@ using Framework.Core.UOW;
 
 namespace AirBag.BAL.Interfaces
 {
-    interface ICardService : IBaseService<Card, CardVm>
+    public interface ICardService : IBaseService<Card, CardVm>
     {
     }
 }

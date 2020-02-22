@@ -1,4 +1,5 @@
-﻿using Framework.Core.Model;
+﻿using AutoMapper;
+using Framework.Core.Model;
 using Framework.Core.Repo;
 using Framework.Core.UOW;
 using Framework.Helpers;
@@ -15,11 +16,14 @@ namespace Framework.Core.BaseModel
     {
         protected readonly IRepository<T> _repository;
         protected readonly IUnitOfWork _unitOfWork;
-
-        public BaseService(IRepository<T> repository, IUnitOfWork unitOfWork)
+        private readonly IMapper _mapper;
+        
+        public BaseService(IRepository<T> repository, IUnitOfWork unitOfWork,
+             IMapper mapper = null)
         {
             _repository = repository;
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         public IVM GetById(int id)
@@ -78,22 +82,30 @@ namespace Framework.Core.BaseModel
         }
         public virtual void Delete(TVM model)
         {
-            //T entity = ValidateDelete(model);
-            //if (_unitOfWork.SaveResult.Errors.Count > 0 || entity == null)
-            //    return;
-
-            //_repository.Delete(entity);
-
-            var entity = ValidateDelete(model);
-
+            T entity = ValidateDelete(model);
             if (_unitOfWork.SaveResult.Errors.Count > 0 || entity == null)
                 return;
-            entity.IsDeleted = true;
-            _repository.Update(entity);
+
+            _repository.Delete(entity);
+
+            //var entity = ValidateDelete(model);
+
+            //if (_unitOfWork.SaveResult.Errors.Count > 0 || entity == null)
+            //    return;
+            //entity.IsDeleted = true;
+            //_repository.Update(entity);
         }
-        public abstract T MapModelToEntity(TVM model);
-        public abstract TVM MapEntityToModel(T entity);
-        protected abstract Func<T, IVM> FuncToVM();
+        public virtual T MapModelToEntity(TVM model) {
+            return _mapper.Map<T>(model);
+        }
+        public virtual TVM MapEntityToModel(T entity)
+        {
+            return _mapper.Map<TVM>(entity);
+        }
+        protected virtual Func<T, IVM> FuncToVM()
+        {
+            return (a)=> MapEntityToModel(a);
+        }
 
         public virtual IList<SelectListItem> GetRequiredCreateModel()
         {

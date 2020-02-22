@@ -116,3 +116,5 @@ G:\AirBag\Common\Framework\obj\Debug\netcoreapp3.1\Framework.AssemblyInfo.cs
 G:\AirBag\Common\Framework\obj\Debug\netcoreapp3.1\Framework.csproj.CopyComplete
 G:\AirBag\Common\Framework\obj\Debug\netcoreapp3.1\Framework.dll
 G:\AirBag\Common\Framework\obj\Debug\netcoreapp3.1\Framework.pdb
+G:\AirBag\Common\Framework\bin\Debug\netcoreapp3.1\AutoMapper.dll
+G:\AirBag\Common\Framework\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

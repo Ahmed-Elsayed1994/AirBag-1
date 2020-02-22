@@ -7,5 +7,6 @@ namespace CoreData.Users.Entities
     public class CountryVm : IVM
     {
         public string Name { get; set; }
+        public int CountryCodeId { get; set; }
     }
 }

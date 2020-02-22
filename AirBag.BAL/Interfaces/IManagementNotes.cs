@@ -3,7 +3,7 @@ using Framework.Core.UOW;
 
 namespace AirBag.BAL.Interfaces
 {
-    interface IManagementNotes : IBaseService<ManagementNotes, ManagementNotesVm>
+    public interface IManagementNotes : IBaseService<ManagementNotes, ManagementNotesVm>
     {
     }
 }

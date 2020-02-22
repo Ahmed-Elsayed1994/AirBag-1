@@ -3,7 +3,7 @@ using Framework.Core.UOW;
 
 namespace AirBag.BAL.Interfaces
 {
-    interface IAirlineService : IBaseService<Airline, AirlineVm>
+    public interface IAirlineService : IBaseService<Airline, AirlineVm>
     {
     }
 }

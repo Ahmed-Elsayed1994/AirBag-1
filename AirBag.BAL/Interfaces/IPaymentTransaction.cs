@@ -3,7 +3,7 @@ using Framework.Core.UOW;
 
 namespace AirBag.BAL.Interfaces
 {
-    interface IPaymentTransaction : IBaseService<Transaction, TransactionVm>
+    public interface IPaymentTransaction : IBaseService<Transaction, TransactionVm>
     {
     }
 }

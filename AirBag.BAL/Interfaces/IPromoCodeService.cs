@@ -3,7 +3,7 @@ using Framework.Core.UOW;
 
 namespace AirBag.BAL.Interfaces
 {
-    interface IPromoCodeService : IBaseService<PromoCode, PromoCodeVm>
+    public interface IPromoCodeService : IBaseService<PromoCode, PromoCodeVm>
     {
     }
 }

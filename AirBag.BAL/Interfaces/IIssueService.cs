@@ -3,7 +3,7 @@ using Framework.Core.UOW;
 
 namespace AirBag.BAL.Interfaces
 {
-    interface IIssueService : IBaseService<Issue, IssueVm>
+    public interface IIssueService : IBaseService<Issue, IssueVm>
     {
     }
 }

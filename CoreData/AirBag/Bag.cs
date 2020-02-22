@@ -8,7 +8,7 @@ namespace CoreData.Users.Entities
     public class Bag : BaseEntity
     {
         public string Name { get; set; }
-        public int AirPortCompanyId { get; set; }
+        public int? AirPortCompanyId { get; set; }
         public int AirPortTakeOffId { get; set; }
         public int ArrivalAirPortId { get; set; }
         public DateTime DateTimeTakeOff { get; set; }
@@ -23,7 +23,9 @@ namespace CoreData.Users.Entities
         public string TiketPhotoId { get; set; }
         public bool Boost { get; set; }
         public bool IsActive { get; set; }
-
+        public int? ManagementApprovedStatusId { get; set; }
+        public int? RequestApprovedStatusId { get; set; }
+        public int? ApprovedByUserId { get; set; }
         public int UserId { get; set; }
         [ForeignKey("UserId")]
         public virtual User User { get; set; }
@@ -34,5 +36,14 @@ namespace CoreData.Users.Entities
         [ForeignKey("AirPortCompanyId")]
         public virtual Airline AirPortCaompany { get; set; }
         public virtual ICollection<UnWantedBagCategory> UnWantedBagCategories { get; set; }
+
+        [ForeignKey("ManagementApprovedStatusId")]
+        public virtual Status ManagementApprovedStatus { get; set; }
+
+        [ForeignKey("RequestApprovedStatusId")]
+        public virtual Status RequestApprovedStatus { get; set; }
+
+        [ForeignKey("ApprovedByUserId")]
+        public virtual User ApprovedUser { get; set; }
     }
 }

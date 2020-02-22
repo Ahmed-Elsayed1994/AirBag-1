@@ -1,4 +1,5 @@
 ﻿using Framework.Core.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -7,6 +8,10 @@ namespace User.BAL.Models
     public class UserVM : IVM
     {
         public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public DateTime CreatedDateTime { get; set; }
+
         [Required]
         public string UserName { get; set; }
         [Required]

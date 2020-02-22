@@ -1,4 +1,5 @@
 ﻿using Framework.Core.Model;
+using System;
 
 namespace CoreData.Users.Entities
 {
@@ -8,14 +9,22 @@ namespace CoreData.Users.Entities
         public int ItemCategoryId { get; set; }
         public int AirPortTakeOffId { get; set; }
         public int ArrivalAirPortId { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime LastUpdatedDate { get; set; }
+        public bool Boost { get; set; }
+        public DateTime DateTimeTakeOff { get; set; }
+        public DateTime ArrivalDateTime { get; set; }
         public decimal Weight { get; set; }
         public decimal Hieght { get; set; }
         public decimal Length { get; set; }
         public decimal Width { get; set; }
-        public string description { get; set; }
+        public string Dscription { get; set; }
         public string Link { get; set; }
         public string PhotosIds { get; set; }
         public bool IsActive { get; set; }
+        public int ManagementApprovedStatusId { get; set; }
+        public int RequestApprovedStatusId { get; set; }
+        public int ApprovedByUserId { get; set; }
         public int UserId { get; set; }
         public string UserName { get; set; }
         public string ItemCategoryName { get; set; }
