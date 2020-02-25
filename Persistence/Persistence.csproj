@@ -11,6 +11,8 @@
     <Compile Remove="Migrations\20200222105908_editcountryCode.Designer.cs" />
     <Compile Remove="Migrations\20200222113337_editcountryCode.cs" />
     <Compile Remove="Migrations\20200222113337_editcountryCode.Designer.cs" />
+    <Compile Remove="Migrations\20200225213557_test.cs" />
+    <Compile Remove="Migrations\20200225213557_test.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -30,3 +30,5 @@ G:\AirBag\NotificationManagement\obj\Debug\netcoreapp3.1\NotificationManagement.
 G:\AirBag\NotificationManagement\obj\Debug\netcoreapp3.1\NotificationManagement.csproj.CopyComplete
 G:\AirBag\NotificationManagement\obj\Debug\netcoreapp3.1\NotificationManagement.dll
 G:\AirBag\NotificationManagement\obj\Debug\netcoreapp3.1\NotificationManagement.pdb
+G:\AirBag\NotificationManagement\bin\Debug\netcoreapp3.1\AirBag.BAL.dll
+G:\AirBag\NotificationManagement\bin\Debug\netcoreapp3.1\AirBag.BAL.pdb

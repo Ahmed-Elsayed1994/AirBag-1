@@ -24,6 +24,7 @@ namespace Api.Extensions
         public static void ConfigureDependencies(this IServiceCollection services)
         {
             services.AddScoped<UnitOfWork>();
+            services.AddTransient<IUtility, Utilities>();
             services.AddScoped<TokenProvider>();
             services.AddScoped<IUsersRepository, UsersRepository>();
             services.AddScoped(typeof(IRepository<>), typeof(Persistence.Repositories.Repository<>));

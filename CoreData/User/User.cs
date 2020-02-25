@@ -14,23 +14,22 @@ namespace CoreData.Users.Entities
         public string LastName { get; set; }
         public string Name { get; set; }
         public string HashedPassword { get; set; }
-        public bool IsActivated { get; set; }
+        public bool IsActivated { get; set; } = false;
         public string VerifiedCode { get; set; }
         [Required]
         public string UserName { get; set; }
         [Required]
         public string Email { get; set; }
-        public int? MobileCountryCodeId { get; set; }
         public string PhoneNumber { get; set; }
         public string ProfilePictureFileId { get; set; }
         public string  CoverPictureFileId { get; set; }
         public string Location { get; set; }
         public DateTime CreatedDateTime{ get; set; }
-        public bool? RemeberMe { get; set; }
+        public bool? RemeberMe { get; set; } = false;
         public int? CountryId{ get; set; }
         public int? NationalityId { get; set; }
-        public bool SenderMore { get; set; }
-        public bool CarrierMore { get; set; }
+        public bool SenderMore { get; set; } = false;
+        public bool CarrierMore { get; set; } = false;
 
         [Column(TypeName = "decimal(5, 2)")]
         public decimal Rate { get; set; }

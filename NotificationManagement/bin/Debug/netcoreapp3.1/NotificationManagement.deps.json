@@ -2059,6 +2059,14 @@
           }
         }
       },
+      "AirBag.BAL/1.0.0": {
+        "dependencies": {
+          "Framework": "1.0.0"
+        },
+        "runtime": {
+          "AirBag.BAL.dll": {}
+        }
+      },
       "Entities/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Proxies": "3.1.0",
@@ -2085,6 +2093,7 @@
       },
       "User.BAL/1.0.0": {
         "dependencies": {
+          "AirBag.BAL": "1.0.0",
           "Entities": "1.0.0",
           "Framework": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "5.5.0"
@@ -3430,6 +3439,11 @@
       "sha512": "sha512-PsDKUZdvWPOlVE5rPs41lBSKhg3Ley2YikDdIXko5tGH3jB1MQX//5xGdNafVccPJdAHA52dtVczYiDCkRYIuQ==",
       "path": "webpush-netcore/1.0.2",
       "hashPath": "webpush-netcore.1.0.2.nupkg.sha512"
+    },
+    "AirBag.BAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Entities/1.0.0": {
       "type": "project",

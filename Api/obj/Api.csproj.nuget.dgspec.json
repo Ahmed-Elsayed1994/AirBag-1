@@ -546,6 +546,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "G:\\AirBag\\AirBag.BAL\\AirBag.BAL.csproj": {
+                "projectPath": "G:\\AirBag\\AirBag.BAL\\AirBag.BAL.csproj"
+              },
               "G:\\AirBag\\Common\\Framework\\Framework.csproj": {
                 "projectPath": "G:\\AirBag\\Common\\Framework\\Framework.csproj"
               },

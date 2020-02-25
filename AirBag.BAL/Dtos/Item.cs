@@ -6,7 +6,7 @@ namespace CoreData.Users.Entities
     public class ItemVm : IVM
     {
         public string Name { get; set; }
-        public int ItemCategoryId { get; set; }
+        public int? ItemCategoryId { get; set; }
         public int AirPortTakeOffId { get; set; }
         public int ArrivalAirPortId { get; set; }
         public DateTime CreatedDate { get; set; }
@@ -22,9 +22,9 @@ namespace CoreData.Users.Entities
         public string Link { get; set; }
         public string PhotosIds { get; set; }
         public bool IsActive { get; set; }
-        public int ManagementApprovedStatusId { get; set; }
-        public int RequestApprovedStatusId { get; set; }
-        public int ApprovedByUserId { get; set; }
+        public int? ManagementApprovedStatusId { get; set; }
+        public int? RequestApprovedStatusId { get; set; }
+        public int? ApprovedByUserId { get; set; }
         public int UserId { get; set; }
         public string UserName { get; set; }
         public string ItemCategoryName { get; set; }

@@ -1,4 +1,5 @@
-﻿using CoreData.Users.Entities;
+﻿using AutoMapper;
+using CoreData.Users.Entities;
 using Framework.Core.BaseModel;
 using Framework.Core.Model;
 using Framework.Core.Repo.Interfaces;
@@ -17,21 +18,21 @@ namespace User.BAL.Services
         private readonly IUtility _utility;
         private readonly IRoleService _roleService;
 
-        protected override Func<CoreData.Users.Entities.User, IVM> FuncToVM()
-        {
-            return (s) => new UserVM
-            {
-                Id = s.Id,
-                Email = s.Email,
-                UserName = s.UserName,
-                Passowrd = s.HashedPassword
-            };
-        }
+        //protected override Func<CoreData.Users.Entities.User, IVM> FuncToVM()
+        //{
+        //    return (s) => new UserVM
+        //    {
+        //        Id = s.Id,
+        //        Email = s.Email,
+        //        UserName = s.UserName,
+        //        Passowrd = s.HashedPassword
+        //    };
+        //}
 
         public UsersService(IUsersRepository usersRepository, IUtility utility, IUnitOfWork unitOfWork,
-            IRoleService roleService
+            IRoleService roleService, IMapper mapper
             )
-            : base(usersRepository, unitOfWork)
+            : base(usersRepository, unitOfWork, mapper)
         {
             _utility = utility;
             _roleService = roleService;
@@ -41,46 +42,51 @@ namespace User.BAL.Services
         {
             if (entity == null)
                 return null;
-            return new UserVM
+            return new BaseUser
             {
                 Id = entity.Id,
                 UserName = entity.UserName,
                 Email = entity.Email,
-                RolesIds = entity.UserRoles?.Select(a=>a.Id).ToList(),
             };
         }
-
         public override CoreData.Users.Entities.User MapModelToEntity(UserVM model)
         {
-            //  var UserRoles = new List<UserRole>();
-
-            if (model == null)
-            {
-                AddError(500, "Model is null");
-                return null;
-            }
-            var usr = _repository.GetById(model.Id);
-            if (usr == null) // insert new user
-            {
-                var user = new CoreData.Users.Entities.User()
-                {
-                    Email = model.Email,
-                    HashedPassword = _utility.Hash(model.Passowrd),
-                    UserName = model.UserName,
-
-                };
-
-                return user;
-            }
-            else
-            {
-                usr.Id = model.Id;
-                usr.UserName = model.UserName;
-                usr.Email = model.Email;
-
-                return usr;
-            }
+            var user = base.MapModelToEntity(model);
+            user.HashedPassword = model.Password != null || model.Password ==""? null: _utility.Hash(model.Password);
+            return user;
         }
+
+        //public override CoreData.Users.Entities.User MapModelToEntity(UserVM model)
+        //{
+        //    //  var UserRoles = new List<UserRole>();
+
+        //    if (model == null)
+        //    {
+        //        AddError(500, "Model is null");
+        //        return null;
+        //    }
+        //    var usr = _repository.GetById(model.Id);
+        //    if (usr == null) // insert new user
+        //    {
+        //        var user = new CoreData.Users.Entities.User()
+        //        {
+        //            Email = model.Email,
+        //            HashedPassword = _utility.Hash(model.Passowrd),
+        //            UserName = model.UserName,
+
+        //        };
+
+        //        return user;
+        //    }
+        //    else
+        //    {
+        //        usr.Id = model.Id;
+        //        usr.UserName = model.UserName;
+        //        usr.Email = model.Email;
+
+        //        return usr;
+        //    }
+        //}
 
         private IList<UserRole> GetUserRoleList(IList<Role> Units, CoreData.Users.Entities.User CurrentUser)
         {

@@ -2226,6 +2226,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "AirBag.BAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AirBag.BAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AirBag.BAL.dll": {}
+        }
+      },
       "Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -7602,6 +7615,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "AirBag.BAL/1.0.0": {
+      "type": "project",
+      "path": "../../AirBag.BAL/AirBag.BAL.csproj",
+      "msbuildProject": "../../AirBag.BAL/AirBag.BAL.csproj"
+    },
     "Entities/1.0.0": {
       "type": "project",
       "path": "../../CoreData/Entities.csproj",
@@ -7615,6 +7633,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "AirBag.BAL >= 1.0.0",
       "Entities >= 1.0.0",
       "Framework >= 1.0.0",
       "System.IdentityModel.Tokens.Jwt >= 5.5.0"
@@ -7646,6 +7665,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "G:\\AirBag\\AirBag.BAL\\AirBag.BAL.csproj": {
+              "projectPath": "G:\\AirBag\\AirBag.BAL\\AirBag.BAL.csproj"
+            },
             "G:\\AirBag\\Common\\Framework\\Framework.csproj": {
               "projectPath": "G:\\AirBag\\Common\\Framework\\Framework.csproj"
             },

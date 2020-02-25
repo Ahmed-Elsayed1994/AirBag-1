@@ -42,3 +42,5 @@ G:\AirBag\UserModule\User.BAL\obj\Debug\netcoreapp3.1\User.BAL.AssemblyInfo.cs
 G:\AirBag\UserModule\User.BAL\obj\Debug\netcoreapp3.1\User.BAL.csproj.CopyComplete
 G:\AirBag\UserModule\User.BAL\obj\Debug\netcoreapp3.1\User.BAL.dll
 G:\AirBag\UserModule\User.BAL\obj\Debug\netcoreapp3.1\User.BAL.pdb
+G:\AirBag\UserModule\User.BAL\bin\Debug\netcoreapp3.1\AirBag.BAL.dll
+G:\AirBag\UserModule\User.BAL\bin\Debug\netcoreapp3.1\AirBag.BAL.pdb

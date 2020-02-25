@@ -3108,6 +3108,19 @@
           "lib/netcoreapp1.0/WebPush.NetCore.dll": {}
         }
       },
+      "AirBag.BAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AirBag.BAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AirBag.BAL.dll": {}
+        }
+      },
       "Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -3146,6 +3159,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "AirBag.BAL": "1.0.0",
           "Entities": "1.0.0",
           "Framework": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "5.5.0"
@@ -9929,6 +9943,11 @@
         "webpush-netcore.1.0.2.nupkg.sha512",
         "webpush-netcore.nuspec"
       ]
+    },
+    "AirBag.BAL/1.0.0": {
+      "type": "project",
+      "path": "../AirBag.BAL/AirBag.BAL.csproj",
+      "msbuildProject": "../AirBag.BAL/AirBag.BAL.csproj"
     },
     "Entities/1.0.0": {
       "type": "project",

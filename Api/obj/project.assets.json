@@ -3967,6 +3967,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "AirBag.BAL": "1.0.0",
           "Entities": "1.0.0",
           "Framework": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "5.5.0"

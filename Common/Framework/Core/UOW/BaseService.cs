@@ -96,7 +96,8 @@ namespace Framework.Core.BaseModel
             //_repository.Update(entity);
         }
         public virtual T MapModelToEntity(TVM model) {
-            return _mapper.Map<T>(model);
+           
+               return  _mapper.Map<T>(model);
         }
         public virtual TVM MapEntityToModel(T entity)
         {

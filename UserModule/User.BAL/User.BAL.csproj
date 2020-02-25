@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\AirBag.BAL\AirBag.BAL.csproj" />
     <ProjectReference Include="..\..\Common\Framework\Framework.csproj" />
     <ProjectReference Include="..\..\CoreData\Entities.csproj" />
   </ItemGroup>

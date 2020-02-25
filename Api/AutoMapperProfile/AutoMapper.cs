@@ -1,9 +1,5 @@
 ﻿using AutoMapper;
 using CoreData.Users.Entities;
-using Framework.Core.UOW;
-using Microsoft.Extensions.DependencyInjection;
-using Persistence.EF;
-using Persistence.UnitOfWork;
 using System;
 
 namespace Api.AutoMapperProfile
@@ -12,6 +8,8 @@ namespace Api.AutoMapperProfile
     {
         public AutoMapper()
         {
+            CreateMap<CoreData.Users.Entities.User, User.BAL.Models.BaseUser>();
+            CreateMap<User.BAL.Models.UserVM, CoreData.Users.Entities.User>().ForMember(a=> a.CreatedDateTime, from=> from.MapFrom(src=> DateTime.UtcNow));
             CreateMap<CoreData.Users.Entities.Action, ActionVm>().ReverseMap();
             CreateMap<AirPort, AirPortVm>();
             CreateMap<AirPortVm, AirPort>();

@@ -25,21 +25,12 @@ namespace CoreData.Users.Entities
         public string TiketPhotoId { get; set; }
         public bool Boost { get; set; }
         public bool IsActive { get; set; }
-        public int ManagementApprovedStatusId { get; set; }
-        public int RequestApprovedStatusId { get; set; }
-        public int ApprovedByUserId { get; set; }
+        public int? ManagementApprovedStatusId { get; set; }
+        public int? RequestApprovedStatusId { get; set; }
+        public int? ApprovedByUserId { get; set; }
         public DateTime ApprovedDateTime { get; set; }
         public int UserId { get; set; }
         public string UserName { get; set; }
         public string AirPortCaompanyName { get; set; }
-        public IList<UnWantedBagCategoryVm> UnWantedBagCategories { get; set; }
-        [ForeignKey("ManagementApprovedStatusId")]
-        public virtual Status ManagementApprovedStatus { get; set; }
-
-        [ForeignKey("RequestApprovedStatusId")]
-        public virtual Status RequestApprovedStatus { get; set; }
-
-        [ForeignKey("ApprovedByUserId")]
-        public virtual User ApprovedUser { get; set; }
     }
 }
