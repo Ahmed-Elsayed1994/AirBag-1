@@ -1,0 +1,16 @@
+G:\AirBag\Persistence\bin\Release\netcoreapp3.1\Framework.exe
+G:\AirBag\Persistence\bin\Release\netcoreapp3.1\Persistence.deps.json
+G:\AirBag\Persistence\bin\Release\netcoreapp3.1\Persistence.runtimeconfig.json
+G:\AirBag\Persistence\bin\Release\netcoreapp3.1\Persistence.runtimeconfig.dev.json
+G:\AirBag\Persistence\bin\Release\netcoreapp3.1\Persistence.dll
+G:\AirBag\Persistence\bin\Release\netcoreapp3.1\Persistence.pdb
+G:\AirBag\Persistence\bin\Release\netcoreapp3.1\Entities.dll
+G:\AirBag\Persistence\bin\Release\netcoreapp3.1\Framework.dll
+G:\AirBag\Persistence\bin\Release\netcoreapp3.1\Framework.pdb
+G:\AirBag\Persistence\bin\Release\netcoreapp3.1\Entities.pdb
+G:\AirBag\Persistence\obj\Release\netcoreapp3.1\Persistence.csprojAssemblyReference.cache
+G:\AirBag\Persistence\obj\Release\netcoreapp3.1\Persistence.AssemblyInfoInputs.cache
+G:\AirBag\Persistence\obj\Release\netcoreapp3.1\Persistence.AssemblyInfo.cs
+G:\AirBag\Persistence\obj\Release\netcoreapp3.1\Persistence.csproj.CopyComplete
+G:\AirBag\Persistence\obj\Release\netcoreapp3.1\Persistence.dll
+G:\AirBag\Persistence\obj\Release\netcoreapp3.1\Persistence.pdb

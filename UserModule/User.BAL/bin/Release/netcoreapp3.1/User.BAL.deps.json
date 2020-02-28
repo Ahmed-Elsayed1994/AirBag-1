@@ -8,13 +8,37 @@
     ".NETCoreApp,Version=v3.1": {
       "User.BAL/1.0.0": {
         "dependencies": {
-          "CoreData": "1.0.0",
+          "AirBag.BAL": "1.0.0",
+          "Entities": "1.0.0",
           "Framework": "1.0.0",
-          "Hierarchy.BAL": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "5.5.0"
         },
         "runtime": {
           "User.BAL.dll": {}
+        }
+      },
+      "AutoMapper/9.0.0": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Reflection.Emit": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/7.0.0": {
+        "dependencies": {
+          "AutoMapper": "9.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "7.0.0.0"
+          }
         }
       },
       "Castle.Core/4.4.0": {
@@ -1424,18 +1448,27 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
-      "CoreData/1.0.0": {
+      "AirBag.BAL/1.0.0": {
+        "dependencies": {
+          "Framework": "1.0.0"
+        },
+        "runtime": {
+          "AirBag.BAL.dll": {}
+        }
+      },
+      "Entities/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Proxies": "3.1.0",
           "NBuilder": "6.0.1"
         },
         "runtime": {
-          "CoreData.dll": {}
+          "Entities.dll": {}
         }
       },
       "Framework/1.0.0": {
         "dependencies": {
-          "CoreData": "1.0.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Entities": "1.0.0",
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.EntityFrameworkCore": "3.1.0",
@@ -1446,15 +1479,6 @@
         "runtime": {
           "Framework.dll": {}
         }
-      },
-      "Hierarchy.BAL/1.0.0": {
-        "dependencies": {
-          "CoreData": "1.0.0",
-          "Framework": "1.0.0"
-        },
-        "runtime": {
-          "Hierarchy.BAL.dll": {}
-        }
       }
     }
   },
@@ -1463,6 +1487,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AutoMapper/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xCqvoxT4HIrNY/xlXG9W+BA/awdrhWvMTKTK/igkGSRbhOhpl3Q8O8Gxlhzjc9JsYqE7sS6AxgyuUUvZ6R5/Bw==",
+      "path": "automapper/9.0.0",
+      "hashPath": "automapper.9.0.0.nupkg.sha512"
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-szI4yeRIM7GWe9JyekW0dKYehPB0t6M+I55fPeCebN6PhS7zQZa0eG3bgOnOx+eP3caSNoE7KEJs2rk7MLsh8w==",
+      "path": "automapper.extensions.microsoft.dependencyinjection/7.0.0",
+      "hashPath": "automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512"
     },
     "Castle.Core/4.4.0": {
       "type": "package",
@@ -2465,17 +2503,17 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
-    "CoreData/1.0.0": {
+    "AirBag.BAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Entities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "Framework/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Hierarchy.BAL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

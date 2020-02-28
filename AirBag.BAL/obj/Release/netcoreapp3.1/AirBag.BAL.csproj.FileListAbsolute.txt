@@ -1,0 +1,14 @@
+G:\AirBag\AirBag.BAL\bin\Release\netcoreapp3.1\Framework.exe
+G:\AirBag\AirBag.BAL\bin\Release\netcoreapp3.1\AirBag.BAL.deps.json
+G:\AirBag\AirBag.BAL\bin\Release\netcoreapp3.1\AirBag.BAL.dll
+G:\AirBag\AirBag.BAL\bin\Release\netcoreapp3.1\AirBag.BAL.pdb
+G:\AirBag\AirBag.BAL\bin\Release\netcoreapp3.1\Entities.dll
+G:\AirBag\AirBag.BAL\bin\Release\netcoreapp3.1\Framework.dll
+G:\AirBag\AirBag.BAL\bin\Release\netcoreapp3.1\Framework.pdb
+G:\AirBag\AirBag.BAL\bin\Release\netcoreapp3.1\Entities.pdb
+G:\AirBag\AirBag.BAL\obj\Release\netcoreapp3.1\AirBag.BAL.csprojAssemblyReference.cache
+G:\AirBag\AirBag.BAL\obj\Release\netcoreapp3.1\AirBag.BAL.AssemblyInfoInputs.cache
+G:\AirBag\AirBag.BAL\obj\Release\netcoreapp3.1\AirBag.BAL.AssemblyInfo.cs
+G:\AirBag\AirBag.BAL\obj\Release\netcoreapp3.1\AirBag.BAL.csproj.CopyComplete
+G:\AirBag\AirBag.BAL\obj\Release\netcoreapp3.1\AirBag.BAL.dll
+G:\AirBag\AirBag.BAL\obj\Release\netcoreapp3.1\AirBag.BAL.pdb

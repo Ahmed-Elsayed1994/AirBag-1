@@ -1,0 +1,8 @@
+G:\AirBag\CoreData\bin\Release\netcoreapp3.1\Entities.deps.json
+G:\AirBag\CoreData\bin\Release\netcoreapp3.1\Entities.dll
+G:\AirBag\CoreData\bin\Release\netcoreapp3.1\Entities.pdb
+G:\AirBag\CoreData\obj\Release\netcoreapp3.1\Entities.csprojAssemblyReference.cache
+G:\AirBag\CoreData\obj\Release\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
+G:\AirBag\CoreData\obj\Release\netcoreapp3.1\Entities.AssemblyInfo.cs
+G:\AirBag\CoreData\obj\Release\netcoreapp3.1\Entities.dll
+G:\AirBag\CoreData\obj\Release\netcoreapp3.1\Entities.pdb
