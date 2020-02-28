@@ -181,11 +181,11 @@ namespace User.BAL.Services
                 Values = _unitOfWork.MobileCountryCode.GetAll().Select(a => new RequiredItems()
                 {
                     Id = a.Id,
-                    Name = a.Name
+                    Name = a.CountryCode
                 }).ToList()
             });
 
-            return null;
+            return items;
         }
 
         public IList<int> GetAdminUserIds()
