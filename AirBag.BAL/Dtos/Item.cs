@@ -6,7 +6,7 @@ namespace CoreData.Users.Entities
     public class ItemVm : IVM
     {
         public string Name { get; set; }
-        public  int? ItemCategoryId { get; set; };
+        public  int? ItemCategoryId { get; set; }
         public int AirPortTakeOffId { get; set; }
         public int ArrivalAirPortId { get; set; }
         public bool Boost { get; set; }
