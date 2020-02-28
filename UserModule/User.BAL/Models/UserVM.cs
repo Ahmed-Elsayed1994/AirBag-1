@@ -10,13 +10,11 @@ namespace User.BAL.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Password { get; set; }
-        public string VerifiedCode { get; set; }
         public string UserName { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public string ProfilePictureFileId { get; set; }
         public string CoverPictureFileId { get; set; }
-        public DateTime CreatedDateTime { get; set; }
         public int? CountryId { get; set; }
         public int? NationalityId { get; set; }
     }
@@ -27,6 +25,7 @@ namespace User.BAL.Models
         public bool SenderMore { get; set; }
         public bool CarrierMore { get; set; }
         public bool IsActivated { get; set; }
+        public DateTime CreatedDateTime { get; set; }
 
         public decimal Rate { get; set; }
         public string CountryName { get; set; }

@@ -16,7 +16,7 @@ namespace Framework.Core.BaseModel
     {
         protected readonly IRepository<T> _repository;
         protected readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
+        protected readonly IMapper _mapper;
         
         public BaseService(IRepository<T> repository, IUnitOfWork unitOfWork,
              IMapper mapper = null)
@@ -96,8 +96,10 @@ namespace Framework.Core.BaseModel
             //_repository.Update(entity);
         }
         public virtual T MapModelToEntity(TVM model) {
-           
+           if(model.Id == 0)
                return  _mapper.Map<T>(model);
+            var entity = _repository.GetById(model.Id);
+            return _mapper.Map(model, entity);
         }
         public virtual TVM MapEntityToModel(T entity)
         {

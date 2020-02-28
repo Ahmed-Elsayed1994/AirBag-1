@@ -13,6 +13,10 @@ namespace CoreData.Users.Entities
         public int ArrivalAirPortId { get; set; }
         public DateTime DateTimeTakeOff { get; set; }
         public DateTime ArrivalDateTime { get; set; }
+        public DateTime CreatedDateTime { get; set; }
+        public DateTime LastUpdatedDate { get; set; }
+        public DateTime ApprovedDateTime { get; set; }
+
         public string TripNumber { get; set; }
         [Column(TypeName = "decimal(5, 2)")]
         public decimal AvailableWeight { get; set; }

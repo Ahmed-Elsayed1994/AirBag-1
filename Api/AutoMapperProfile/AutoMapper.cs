@@ -12,22 +12,29 @@ namespace Api.AutoMapperProfile
             CreateMap<User.BAL.Models.UserVM, CoreData.Users.Entities.User>().ForMember(a=> a.CreatedDateTime, from=> from.MapFrom(src=> DateTime.UtcNow));
             CreateMap<CoreData.Users.Entities.Action, ActionVm>().ReverseMap();
             CreateMap<AirPort, AirPortVm>();
+            CreateMap<AirPort, AirPortPartial>();
+
             CreateMap<AirPortVm, AirPort>();
             CreateMap<Airline, AirlineVm>().ReverseMap();
             CreateMap<Bag, BagVm>();
+            CreateMap<Bag, BagPartial>();
+
             CreateMap<BagVm, Bag>();
             CreateMap<Card, CardVm>();
             CreateMap<CardVm, Card>();
             CreateMap<City, CityVm>().ForMember(a=> a.CountryName, from=> from.MapFrom(a=> a.Country.Name));
             CreateMap<CityVm, City>();
-            
-           // CreateMap<CityVm, City>().ForMember(a => a.Country, from => from.MapFrom(a => _unitOfWork.Country.GetById(a.CountryId)));
+            CreateMap<NationalityVm, Nationality>();
+            CreateMap<Nationality, NationalityVm>();
+
+            // CreateMap<CityVm, City>().ForMember(a => a.Country, from => from.MapFrom(a => _unitOfWork.Country.GetById(a.CountryId)));
             CreateMap<Country, CountryVm>().ReverseMap();
             CreateMap<Issue, IssueVm>();
             CreateMap<IssueVm, Issue>();
             CreateMap<IssueCategory, IssueCategoryVm>().ReverseMap();
             CreateMap<Item, ItemVm>();
-            CreateMap<ItemVm, Item>().ForMember(a=> a.CreatedDate, from=> from.MapFrom(src => DateTime.UtcNow));
+            CreateMap<ItemVm, Item>();
+            CreateMap<Item, ItemPartial>();
             CreateMap<ItemCategory, ItemCategoryVm>().ReverseMap();
             CreateMap<ManagementNotes, ManagementNotesVm>();
             CreateMap<ManagementNotesVm, ManagementNotes>();

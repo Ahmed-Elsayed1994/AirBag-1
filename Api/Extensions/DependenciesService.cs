@@ -66,6 +66,7 @@ namespace Api.Extensions
             services.AddTransient<IPromoCodeService, PromoCodeService>();
             services.AddTransient<IRateService, RateService>();
             services.AddTransient<IRequestService, RequestService>();
+            services.AddTransient<INationalityService, NationalityService>();
 
             #endregion
         }

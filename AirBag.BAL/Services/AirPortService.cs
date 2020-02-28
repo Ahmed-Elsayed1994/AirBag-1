@@ -12,12 +12,18 @@ namespace User.BAL.Services
 {
     public class AirPortService : BaseService<AirPort, AirPortVm>, IAirPortService
     {
+        
         public AirPortService(IRepository<AirPort> repository, IUnitOfWork unitOfWork, IMapper mapper
             )
             : base(repository, unitOfWork, mapper)
         {
+
+        }
+        public override AirPortVm MapEntityToModel(AirPort entity)
+        {
+            return _mapper.Map<AirPortPartial>(entity);
         }
 
-      
+
     }
 }

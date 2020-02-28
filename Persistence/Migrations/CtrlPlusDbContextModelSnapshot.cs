@@ -242,6 +242,9 @@ namespace Persistence.Migrations
                     b.Property<int?>("ApprovedByUserId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("ApprovedDateTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<int?>("ApprovedUserId")
                         .HasColumnType("int");
 
@@ -260,6 +263,9 @@ namespace Persistence.Migrations
                     b.Property<decimal>("CostPerKG")
                         .HasColumnType("decimal(5, 2)");
 
+                    b.Property<DateTime>("CreatedDateTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime>("DateTimeTakeOff")
                         .HasColumnType("datetime2");
 
@@ -268,6 +274,9 @@ namespace Persistence.Migrations
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
+
+                    b.Property<DateTime>("LastUpdatedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int?>("ManagementApprovedStatusId")
                         .HasColumnType("int");
