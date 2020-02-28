@@ -46,7 +46,8 @@ namespace Persistence.UnitOfWork
         IRepository<RequestDetails> _requestDetails;
         IRepository<RequestType> _requestType;
         IRepository<Transaction> _transaction;
-        IRepository<UnWantedBagCategory> _unWantedBagCategory; 
+        IRepository<UnWantedBagCategory> _unWantedBagCategory;
+        IRepository<Nationality> _nationality;
         #endregion
 
         #region Properties
@@ -89,6 +90,8 @@ namespace Persistence.UnitOfWork
         public IRepository<Transaction> Transaction => _transaction = _transaction ?? new Repository<Transaction>(context);
 
         public IRepository<UnWantedBagCategory> UnWantedBagCategory => _unWantedBagCategory = _unWantedBagCategory ?? new Repository<UnWantedBagCategory>(context);
+
+        public IRepository<Nationality> Nationality => _nationality = _nationality ?? new Repository<Nationality>(context);
         #endregion
 
         #endregion

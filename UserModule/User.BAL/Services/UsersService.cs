@@ -155,6 +155,36 @@ namespace User.BAL.Services
 
         public override IList<SelectListItem> GetRequiredCreateModel()
         {
+            IList<SelectListItem> items = new List<SelectListItem>();
+            items.Add(new SelectListItem()
+            {
+                Key = "Countries",
+                Values = _unitOfWork.Country.GetAll().Select(a => new RequiredItems()
+                {
+                    Id = a.Id,
+                    Name = a.Name
+                }).ToList()
+            });
+
+            items.Add(new SelectListItem()
+            {
+                Key = "Nationality",
+                Values = _unitOfWork.Nationality.GetAll().Select(a => new RequiredItems()
+                {
+                    Id = a.Id,
+                    Name = a.Name
+                }).ToList()
+            });
+            items.Add(new SelectListItem()
+            {
+                Key = "CountryCodes",
+                Values = _unitOfWork.MobileCountryCode.GetAll().Select(a => new RequiredItems()
+                {
+                    Id = a.Id,
+                    Name = a.Name
+                }).ToList()
+            });
+
             return null;
         }
 

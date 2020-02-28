@@ -29,6 +29,7 @@ namespace Framework.Core.UOW
         IRepository<RequestType> RequestType { get; }
         IRepository<Transaction> Transaction { get; }
         IRepository<UnWantedBagCategory> UnWantedBagCategory { get; }
+        IRepository<Nationality> Nationality { get; }
 
 
 
