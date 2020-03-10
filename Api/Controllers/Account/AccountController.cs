@@ -2,6 +2,8 @@
 using Framework.Core.UOW;
 using Framework.Helpers;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Threading.Tasks;
 using User.BAL.Models;
 using User.BAL.Services;
 
@@ -29,14 +31,14 @@ namespace Api.Controllers.Account
             _unitOfWork = unitOfWork;
         }
         [HttpPost]
-        public IActionResult Register(UserVM registerVM)
+        public async Task<IActionResult> Register(UserVM registerVM)
         {
             if (!ModelState.IsValid)
                 return BadRequest(GetErrors(ModelState));
             _accountService.Register(registerVM);
 
             if (!CheckExistError())
-                _unitOfWork.Save();
+               await _unitOfWork.Save();
 
             return _unitOfWork.SaveResult.Affected > 0 ? ResCreateOk(_unitOfWork.SaveResult) : ResCreateServerError(_unitOfWork.SaveResult);
         }
@@ -61,6 +63,32 @@ namespace Api.Controllers.Account
         protected bool CheckExistError()
         {
             return _unitOfWork.SaveResult.Errors.Count != 0;
+        }
+
+        [HttpGet]
+        public IActionResult GenerateOTP(string phoneNumber)
+        {
+            string numbers = "1234567890";
+            string characters = numbers;
+            int length = 5;
+            string otp = string.Empty;
+            for (int i = 0; i < length; i++)
+            {
+                string character = string.Empty;
+                do
+                {
+                    int index = new Random().Next(0, characters.Length);
+                    character = characters.ToCharArray()[index].ToString();
+                } while (otp.IndexOf(character) != -1);
+                otp += character;
+            }
+            return Ok(otp);
+        }
+
+        [HttpGet]
+        public IActionResult VerifyOTP(string phoneNumber, string Code)
+        {
+            return Ok();
         }
     }
 }

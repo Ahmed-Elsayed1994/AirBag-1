@@ -448,7 +448,7 @@ namespace Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<int>("IssueCategoryId")
+                    b.Property<int?>("IssueCategoryId")
                         .HasColumnType("int");
 
                     b.Property<int>("UserId")
@@ -1160,9 +1160,7 @@ namespace Persistence.Migrations
                 {
                     b.HasOne("CoreData.Users.Entities.IssueCategory", "IssueCategory")
                         .WithMany()
-                        .HasForeignKey("IssueCategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("IssueCategoryId");
 
                     b.HasOne("CoreData.Users.Entities.User", "User")
                         .WithMany("Issues")

@@ -38,4 +38,9 @@ namespace CoreData.Users.Entities
         public bool IsActive { get; set; }
 
     }
+
+    public class BagSearchVm
+    {
+
+    }
 }

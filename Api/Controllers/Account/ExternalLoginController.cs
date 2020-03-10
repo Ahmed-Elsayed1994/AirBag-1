@@ -1,7 +1,13 @@
-﻿//using Api.Controllers.Base;
+﻿//using AngularASPNETCore2WebApiAuth.Models;
+//using Api.Controllers.Base;
+//using Api.Models;
 //using Framework.Core.UOW;
 //using Framework.Helpers;
 //using Microsoft.AspNetCore.Mvc;
+//using Microsoft.Extensions.Options;
+//using Newtonsoft.Json;
+//using System.Net.Http;
+//using System.Threading.Tasks;
 //using User.BAL.Models;
 //using User.BAL.Services;
 
@@ -13,17 +19,11 @@
 //    public class ExternalLoginController : CommonController
 //    {
 //        private readonly FacebookAuthSettings _fbAuthSettings;
-//        private readonly IJwtFactory _jwtFactory;
-//        private readonly JwtIssuerOptions _jwtOptions;
 //        private static readonly HttpClient Client = new HttpClient();
 
-//        public ExternalAuthController(IOptions<FacebookAuthSettings> fbAuthSettingsAccessor, UserManager<AppUser> userManager, ApplicationDbContext appDbContext, IJwtFactory jwtFactory, IOptions<JwtIssuerOptions> jwtOptions)
+//        public ExternalLoginController(IOptions<FacebookAuthSettings> fbAuthSettingsAccessor)
 //        {
 //            _fbAuthSettings = fbAuthSettingsAccessor.Value;
-//            _userManager = userManager;
-//            _appDbContext = appDbContext;
-//            _jwtFactory = jwtFactory;
-//            _jwtOptions = jwtOptions.Value;
 //        }
 
 //        // POST api/externalauth/facebook
@@ -39,7 +39,7 @@
 
 //            if (!userAccessTokenValidation.Data.IsValid)
 //            {
-//                return BadRequest(Errors.AddErrorToModelState("login_failure", "Invalid facebook token.", ModelState));
+//                return BadRequest(ModelState);
 //            }
 
 //            // 3. we've got a valid token so we can request user data from fb

@@ -52,7 +52,7 @@ namespace User.BAL.Services
         public override CoreData.Users.Entities.User MapModelToEntity(UserVM model)
         {
             var user = base.MapModelToEntity(model);
-            user.HashedPassword = model.Password != null || model.Password ==""? null: _utility.Hash(model.Password);
+            user.HashedPassword = model.Password == null || model.Password ==""? null: _utility.Hash(model.Password);
             return user;
         }
 

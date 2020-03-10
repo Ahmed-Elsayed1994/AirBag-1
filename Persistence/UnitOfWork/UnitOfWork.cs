@@ -8,6 +8,7 @@ using Framework.Core.UOW;
 using Persistence.Repositories;
 using System;
 using System.Threading.Tasks;
+using User.BAL.Models;
 
 namespace Persistence.UnitOfWork
 {
@@ -48,6 +49,7 @@ namespace Persistence.UnitOfWork
         IRepository<Transaction> _transaction;
         IRepository<UnWantedBagCategory> _unWantedBagCategory;
         IRepository<Nationality> _nationality;
+        IRepository<OTPHistory> _opt;
         #endregion
 
         #region Properties

@@ -170,7 +170,6 @@ G:\AirBag\Api\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces
 G:\AirBag\Api\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.VisualBasic.dll
 G:\AirBag\Api\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
 G:\AirBag\Api\bin\Release\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-G:\AirBag\Api\bin\Release\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 G:\AirBag\Api\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 G:\AirBag\Api\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
 G:\AirBag\Api\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
@@ -182,7 +181,6 @@ G:\AirBag\Api\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstr
 G:\AirBag\Api\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 G:\AirBag\Api\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
 G:\AirBag\Api\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-G:\AirBag\Api\bin\Release\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
 G:\AirBag\Api\bin\Release\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
 G:\AirBag\Api\bin\Release\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
 G:\AirBag\Api\bin\Release\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
@@ -261,11 +259,11 @@ G:\AirBag\Api\bin\Release\netcoreapp3.1\User.BAL.pdb
 G:\AirBag\Api\obj\Release\netcoreapp3.1\Api.csprojAssemblyReference.cache
 G:\AirBag\Api\obj\Release\netcoreapp3.1\staticwebassets\Api.StaticWebAssets.Manifest.cache
 G:\AirBag\Api\obj\Release\netcoreapp3.1\staticwebassets\Api.StaticWebAssets.xml
-G:\AirBag\Api\obj\Release\netcoreapp3.1\Api.MvcApplicationPartsAssemblyInfo.cs
-G:\AirBag\Api\obj\Release\netcoreapp3.1\Api.MvcApplicationPartsAssemblyInfo.cache
 G:\AirBag\Api\obj\Release\netcoreapp3.1\Api.AssemblyInfoInputs.cache
 G:\AirBag\Api\obj\Release\netcoreapp3.1\Api.AssemblyInfo.cs
 G:\AirBag\Api\obj\Release\netcoreapp3.1\Api.RazorTargetAssemblyInfo.cache
 G:\AirBag\Api\obj\Release\netcoreapp3.1\Api.csproj.CopyComplete
 G:\AirBag\Api\obj\Release\netcoreapp3.1\Api.dll
 G:\AirBag\Api\obj\Release\netcoreapp3.1\Api.pdb
+G:\AirBag\Api\obj\Release\netcoreapp3.1\Api.MvcApplicationPartsAssemblyInfo.cs
+G:\AirBag\Api\obj\Release\netcoreapp3.1\Api.MvcApplicationPartsAssemblyInfo.cache

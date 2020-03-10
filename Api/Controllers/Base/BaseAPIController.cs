@@ -3,6 +3,7 @@ using Framework.Core;
 using Framework.Core.Model;
 using Framework.Core.UOW;
 using Framework.Helpers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -10,7 +11,7 @@ namespace Api.Controllers.Base
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class BaseAPIController<Service, Entity, VM> : CommonController where Service : IBaseService<Entity, VM> where Entity : BaseEntity where VM : IVM, new()
     {
         internal readonly IUnitOfWork _unitOfWork;

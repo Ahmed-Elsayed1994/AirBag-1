@@ -43,7 +43,7 @@ namespace User.BAL.Models
                 {
                     var claims1 = new List<Claim>();
                     claims1.Add(new Claim(ClaimTypes.Name, user.UserName));
-                    claims1.Add(new Claim("Id", user.Id.ToString()));
+                    claims1.Add(new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()));
 
                     foreach (var item in user.UserRoles)
                     {
@@ -60,25 +60,11 @@ namespace User.BAL.Models
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
-            string[] userNames = null;
             string fName = string.Empty;
             string lName = string.Empty;
-            if (user.Name != null)
-            {
-                if (user.Name.Contains(" "))
-                {
-                    userNames = user.Name.Split(" ");
-                }
-
-            }
-            if (userNames != null && userNames.Length >= 0)
-            {
-                fName = userNames[0];
-                if (userNames.Length > 0)
-                {
-                    lName = userNames[1];
-                }
-            }
+            fName = user.FirstName;
+            lName = user.LastName;
+            
             return new Tokens(tokenHandler.WriteToken(token), "JWT", user.UserName, user.Id, fName, lName);
         }
     }

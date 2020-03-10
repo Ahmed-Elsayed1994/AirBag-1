@@ -4,6 +4,7 @@ using Framework.Core.Model;
 using Framework.Core.Repo;
 using Framework.Core.Repo.Interfaces;
 using System.Threading.Tasks;
+using User.BAL.Models;
 
 namespace Framework.Core.UOW
 {
@@ -30,6 +31,8 @@ namespace Framework.Core.UOW
         IRepository<Transaction> Transaction { get; }
         IRepository<UnWantedBagCategory> UnWantedBagCategory { get; }
         IRepository<Nationality> Nationality { get; }
+        IRepository<OTPHistory> OPTHistory { get; }
+
 
 
 
